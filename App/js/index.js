@@ -99,6 +99,15 @@ xui.Class('App', 'xui.Module',{
                 })
             );
             
+            append(
+                xui.create("xui.UI.DatePicker")
+                .setHost(host,"xui_ui_datepicker1")
+                .setDirtyMark(false)
+                .setLeft("16.666666666666668em")
+                .setTop("8.333333333333334em")
+                .setTimeInput(true)
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
@@ -107,7 +116,8 @@ xui.Class('App', 'xui.Module',{
         customAppend : function(parent, subId, left, top){
             // "return false" will cause all the internal UI controls will be added to the parent panel
             return false;
-        }
+        },
+        autoDestroy:false
         /*,
         // To determine how properties affects this module
         propSetAction : function(prop){
